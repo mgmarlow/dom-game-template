@@ -1,6 +1,6 @@
-# DOM game template
+# Simple game template
 
-Sometimes you don't need a canvas.
+Because sometimes you don't need HTML5 canvas.
 
 This template is a [snabbdom](https://github.com/snabbdom/snabbdom) +
 [Redux](https://redux-toolkit.js.org/) template for building games with
