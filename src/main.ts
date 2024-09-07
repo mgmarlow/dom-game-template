@@ -6,7 +6,7 @@ import {
   attributesModule,
   VNode,
 } from "snabbdom";
-import store from "./game";
+import Game from "./game";
 import { view } from "./view";
 
 let vnode: VNode;
@@ -21,10 +21,12 @@ const patch = init([
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector<HTMLDivElement>("#app")!;
 
-  store.subscribe(() => {
-    vnode = patch(vnode, view(store.getState(), store.dispatch));
-  });
+  const game = new Game(render);
+
+  function render() {
+    vnode = patch(vnode, view(game));
+  }
 
   // Initial render.
-  vnode = patch(container, view(store.getState(), store.dispatch));
+  vnode = patch(container, view(game));
 });

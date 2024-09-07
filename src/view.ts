@@ -1,15 +1,10 @@
 import { h } from "snabbdom";
-import {
-  type GameState,
-  type GameDispatch,
-  increment,
-  decrement,
-} from "./game";
+import Game from "./game";
 
-export const view = (game: GameState, dispatch: GameDispatch) => {
+export const view = (game: Game) => {
   return h("div", [
     h("p", `count: ${game.count}`),
-    h("button", { on: { click: () => dispatch(increment()) } }, "+"),
-    h("button", { on: { click: () => dispatch(decrement()) } }, "-"),
+    h("button", { on: { click: () => game.increment() } }, "+"),
+    h("button", { on: { click: () => game.decrement() } }, "-"),
   ]);
 };

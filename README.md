@@ -2,14 +2,13 @@
 
 Because sometimes you don't need HTML5 canvas.
 
-This template is a [snabbdom](https://github.com/snabbdom/snabbdom) +
-[Redux](https://redux-toolkit.js.org/) template for building games with
-TypeScript, inspired by
-[Lichess](https://github.com/lichess-org/lila/tree/master). Although
-Lichess doesn't use Redux in its implementation, I found it a good
-compliment for the types of games that can get by with just the
-plain old browser DOM (which in my case are typically turn-based
-puzzle games not unlike Chess).
+This template is inspired by 
+[Lichess](https://github.com/lichess-org/lila/tree/master), using
+the tiny virtual DOM library [snabbdom](https://github.com/snabbdom/snabbdom)
+to drive a game that manually controls rendering behavior with the DOM.
+For the types of games that I build (turn-based puzzle/tactical games),
+it's a great fit. The HTML5 canvas is overkill for games that can get
+by just using the plain ol' DOM.
 
 ## Get started
 
